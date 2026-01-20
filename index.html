@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台一不動產 2026 尾牙快樂入座查詢</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #FFF8DC;
+      padding: 20px;
+    }
+    h1 {
+      color: #E53935;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    input, button {
+      width: 90%;
+      max-width: 300px;
+      padding: 15px;
+      font-size: 1rem;
+      margin: 10px auto;
+      display: block;
+    }
+    button {
+      background-color: #FDD835;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #D32F2F;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎊 台一不動產尾牙晚宴查詢座位 🎊</h1>
+  <p>請輸入員工姓名查詢您的桌號與人數：</p>
+  <input type="text" id="nameInput" placeholder="例如：張舒晴">
+  <button onclick="checkSeat()">🔍 查詢我的座位</button>
+  <div id="result"></div>
+
+  <script>
+    const seatList = {
+      "鄭皓謙": "第1桌共5位",
+      "李佳儒": "第1桌共2位",
+      "大桃園": "第1桌共1位",
+      "陳宏霖": "第3桌共4位",
+      "呂宜庭": "第3桌共1位",
+      "江信彥": "第3桌共1位",
+      "簡文玲": "第3桌共1位",
+      "王珂公": "第3桌共2位",
+      "蘇俊諺": "第5桌共3位",
+      "黃明正": "第5桌共2位",
+      "邱如瑩": "第5桌共1位",
+      "徐翊筑": "第5桌共1位",
+      "楊詩妤": "第5桌共3位",
+      "石鎧華": "第7桌共1位",
+      "鄭宇橦": "第7桌共2位",
+      "陳紀元": "第7桌共1位",
+      "陳璿云": "第7桌共1位",
+      "陳程畇": "第7桌共2位",
+      "齊智萱": "第9桌共1位",
+      "李欣諭": "第9桌共1位",
+      "劉佩玲": "第9桌共2位",
+      "吳公": "第9桌共4位",
+      "黃于潔": "第11桌共4位",
+      "莫予萱": "第11桌共1位",
+      "陳詩婷": "第11桌共1位",
+      "李羽庭": "第11桌共2位",
+      "張舒晴": "第13桌共2位",
+      "石羚": "第13桌共1位",
+      "江沂宸": "第13桌共1位",
+      "沈瑜萱": "第13桌共1位",
+      "陳鈺惇": "第13桌共2位",
+      "鎧華助理": "第13桌共1位",
+      "塗佩珍": "第15桌共3位",
+      "徐姿雯": "第15桌共2位",
+      "葉璟儀": "第15桌共1位",
+      "鄭伊思": "第15桌共1位",
+      "劉曉蒨": "第2桌共2位",
+      "謝欣芳": "第2桌共1位",
+      "黃詩媛": "第2桌共2位",
+      "孫睿渝": "第2桌共2位",
+      "徐公": "第2桌共2位",
+      "温曼妃": "第4桌共2位",
+      "陳卿秀": "第4桌共1位",
+      "林佳妙": "第4桌共2位",
+      "許辰瑄": "第4桌共1位",
+      "朱源浩": "第4桌共1位",
+      "林均霖": "第4桌共2位",
+      "陳奕如": "第6桌共4位",
+      "林峻葳": "第6桌共2位",
+      "蔡佩怡": "第6桌共2位",
+      "邱冠智": "第8桌共2位",
+      "黃子銘": "第8桌共1位",
+      "胡銘恩": "第8桌共2位",
+      "林宗佑": "第8桌共1位",
+      "蔡巧筠": "第8桌共3位",
+      "黃貞鳳": "第10桌共4位",
+      "林語甯": "第10桌共4位",
+      "陳奎澤": "第12桌共3位",
+      "劉若喬": "第12桌共1位",
+      "林紅霞": "第12桌共2位",
+      "古代": "第12桌共2位",
+      "陳絲穎": "第14桌共4位",
+      "張瑛娗": "第14桌共2位",
+      "洪裔喬": "第14桌共2位",
+      "郭潔淩": "第16桌共3位",
+      "梁清豐": "第16桌共5位"
+      // …其餘人依此格式加入
+    };
+
+    function checkSeat() {
+      const name = document.getElementById('nameInput').value.trim();
+      const result = document.getElementById('result');
+      if(seatList[name]) {
+        result.innerHTML = `🎉 ${name} 您的座位是：${seatList[name]} 🎉`;
+      } else {
+        result.innerHTML = `😅 查無此員工姓名，請確認輸入正確`;
+      }
+    }
+  </script>
+</body>
+</html>
